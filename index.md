@@ -1,5 +1,4 @@
-# CSE 15L  w23 Lab Report 2
-## SERVERS AND BUGS 
+# SERVERS AND BUGS 
 ## Aaron Arellano
 
 In this second lab report, we will be demonstrating the creation and function of webservers (week 2 lab), as well as the process of proper debugging for 
