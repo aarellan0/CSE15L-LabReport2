@@ -146,8 +146,49 @@ following JUnit test.
 
 The symptoms of these inputs can be seen when compiling and running the JUnit tests and checking the terminal output (shown below).
 
-![Image](Symptoms)
+![Image](Symptoms.png)
 
+To fix the code, a rewrite of the method will be neccessary. After debugging and fixing the method, the old and new methods are shown below.
+
+Before the fix (original):
+
+```
+static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = newArray[arr.length - i - 1];
+    }
+    return arr;
+  }
+```
+
+New Method after fixing:
+```
+static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      newArray[i] = arr[arr.length - i - 1];
+    }
+    return newArray;
+  }
+```
+
+After fixing the method, all the tests that were previously failing are now passing. There were a few things that the original method did wrong. For one,
+the method returned *arr*, which was the parameter of the method, and not the newArray which was the reversed copy that was supposed to be returned. Additionally, a second issue was within the for loop. The original method had 
+```
+arr[i] = newArray[length-i-1];
+```
+This is problematic because the loop is changing the values WITHIN the parameter array, instead of changing the values of the newArray copy. Its also
+trying to access the values of the newArray, which is an empty array full of zeros. In the end, the method will simply return an empty array instead of a 
+reversed array. To fix these issues, I simply changed the return statement to return the reversed newArray copy, as the method intended to. I also
+switched the arrays within the loop so that the values of the parameter arr array are being inputted in the empty copy array. This is done by writing 
+```
+newArray[i] = arr[length-i-1];
+```
+In the end, these fixes return the correct output, and corrects the functionality of the method to properly return a new array containing the items
+of the parameter array in reversed order.
+
+# Part 3 - What did I learn in these labs?
 
 
 
