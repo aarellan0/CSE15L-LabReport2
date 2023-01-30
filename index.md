@@ -190,7 +190,9 @@ of the parameter array in reversed order.
 
 # Part 3 - What did I learn in these labs?
 
-
+I learned quite a few new things in lab during weeks two and three. For one, I learned that webservers can actually be started with just a java program,
+and that I can write programs that keep track of data from the websites that i create. In the case of numberserver and stringserver, we can track information from the different parts of the url itself. That was another thing I didn't know too well, the names and functionality of each section of the
+url. This knowledge in turn helped me develop a method for analyzing a url's query. In addition to the webserver, I also learned more about the functionality and usage of JUnit. I learned a little from the beginning of CSE 12, but this lab helped me understand how to create functioning and useful tests for a variety of different methods and data structures. In the end, this knowledge will help me strengthen my programming and aid me in making them more efficient with testing.
 
 
 
