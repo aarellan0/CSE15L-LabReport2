@@ -75,9 +75,9 @@ variable in the handler class, which is utilized by the String Server class.
 was a class provided in the github course wavelet repository.From within the server class, there is a method call to the handle request method found 
 in the Handler class, which reads the URL path and stores the string inputs into the message string variable.
 
-2.What are the arguments to those methods? The values of any class fields? - When the start method is called from the server class, the int port
+2. What are the arguments to those methods? The values of any class fields? - When the start method is called from the server class, the int port
 argument is the port number we put when running StringServer (in my example it was 6060), and the second argument was a handler object. Within
 the Handler class, the string message field variable is just an empty string. When the handleRequest method is called from the server, it's argument is
 a URI object, which contains the url of the website we launched.This url is then scanned for the contents of its path and query.
 
-3.How do the values of class fields change as a result of the request shown in the picture? 
+3. How do the values of class fields change as a result of the request shown in the picture? 
